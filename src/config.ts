@@ -1,7 +1,7 @@
 const Config = () => {
   return {
     ApiEnv: {
-      apiKey: process.env.REACT_APP_DEV_API_KEY
+      endpoint: process.env.REACT_APP_DEV_ENDPOINT
     }
   }
 }

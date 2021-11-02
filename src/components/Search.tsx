@@ -14,7 +14,10 @@ const Search: React.FC = () => {
       type: ActionType.SEARCH_MOVIES_REQUEST,
       loading: true
     })
-    fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${ApiEnv.apiKey}`)
+    fetch(`${ApiEnv.endpoint}?s=${searchValue}`, {
+      mode: 'cors',
+      credentials: 'include'
+    })
       .then(response => response.json())
       .then(jsonResponse => {
         if (jsonResponse.Response === "True") {
