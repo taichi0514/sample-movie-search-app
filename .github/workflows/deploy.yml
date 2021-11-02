@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  REACT_APP_DEV_API_KEY: ${{ secrets.REACT_APP_DEV_API_KEY_SECRETS }}
+  REACT_APP_DEV_ENDPOINT: ${{ secrets.REACT_APP_DEV_ENDPOINT }}
 
 jobs:
   deploy:
